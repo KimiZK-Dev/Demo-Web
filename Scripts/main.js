@@ -35,15 +35,15 @@ async function getCountryAndIP() {
 
 
 function calculateUptime() {
-  const currentTime = Date.now();
-  const uptimeInSeconds = (currentTime - startTime) / 1000;
-
-  const days = Math.floor(uptimeInSeconds / 86400);
-  const hours = Math.floor((uptimeInSeconds % 86400) / 3600);
-  const minutes = Math.floor((uptimeInSeconds % 3600) / 60);
-  const seconds = Math.floor(uptimeInSeconds % 60);
-
-  const uptimeString = `${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
+    const currentTime = Date.now();
+    const uptimeInSeconds = (currentTime - startTime) / 1000;
+  
+    const days = Math.floor(uptimeInSeconds / 86400).toString().padStart(2, '0');
+    const hours = Math.floor((uptimeInSeconds % 86400) / 3600).toString().padStart(2, '0');
+    const minutes = Math.floor((uptimeInSeconds % 3600) / 60).toString().padStart(2, '0');
+    const seconds = Math.floor(uptimeInSeconds % 60).toString().padStart(2, '0');
+  
+    const uptimeString = `${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
   document.querySelector('.onlTime').textContent = uptimeString;
 }
 
