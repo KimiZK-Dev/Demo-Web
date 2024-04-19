@@ -5,9 +5,9 @@ async function getHoChiMinhTime() {
     const unixTime = data.unixtime;
 
     const date = new Date(unixTime * 1000);
-    const hours = date.getHours().toString().padStart(2, '0');
-    const minutes = date.getMinutes().toString().padStart(2, '0');
-    const seconds = date.getSeconds().toString().padStart(2, '0');
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
 
     document.querySelector('.time').textContent = `${hours}:${minutes}:${seconds}`;
   } catch (error) {
@@ -34,20 +34,20 @@ async function getCountryAndIP() {
 }
 
 
+const startTime = Date.now();
 function calculateUptime() {
-    const currentTime = Date.now();
-    const uptimeInSeconds = (currentTime - startTime) / 1000;
-  
-    const days = Math.floor(uptimeInSeconds / 86400).toString().padStart(2, '0');
-    const hours = Math.floor((uptimeInSeconds % 86400) / 3600).toString().padStart(2, '0');
-    const minutes = Math.floor((uptimeInSeconds % 3600) / 60).toString().padStart(2, '0');
-    const seconds = Math.floor(uptimeInSeconds % 60).toString().padStart(2, '0');
-  
-    const uptimeString = `${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
+  const currentTime = Date.now();
+  const uptimeInSeconds = (currentTime - startTime) / 1000;
+
+  const days = String(Math.floor(uptimeInSeconds / 86400)).padStart(2, '0');
+  const hours = String(Math.floor((uptimeInSeconds % 86400) / 3600)).padStart(2, '0');
+  const minutes = String(Math.floor((uptimeInSeconds % 3600) / 60)).padStart(2, '0');
+  const seconds = String(Math.floor(uptimeInSeconds % 60)).padStart(2, '0');
+
+  const uptimeString = `${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
   document.querySelector('.onlTime').textContent = uptimeString;
 }
 
-const startTime = Date.now();
 getHoChiMinhTime();
 getCountryAndIP();
 calculateUptime();
