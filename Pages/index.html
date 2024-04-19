@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Preview</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/home.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/aside.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/body.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="logo">
+                <h4>- KIMIZK -</h4>
+            </div>
+    
+            <ul class="home">
+                <li>
+                    <i class='bx bxs-home-heart' ></i>
+                    <span>Home</span>
+                </li>
+                <li>
+                    <i class='bx bxs-cog'></i>
+                    <span>Account Settings</span> 
+                </li>
+            </ul>
+    
+            <ul class="page">
+                <li>
+                    <i class='bx bxl-facebook-circle'></i> 
+                    <span>Facebook</span>
+                </li>
+                <li>
+                    <i class='bx bxl-messenger'></i> 
+                    <span>Messenger</span>
+                </li>
+                <li>
+                    <i class='bx bxl-telegram'></i>
+                    <span>Telegram</span>
+                </li>
+                <li>
+                    <i class='bx bxl-instagram-alt'></i> 
+                    <span>Instagram</span>
+                </li>
+                <li>
+                    <i class='bx bxl-discord-alt'></i> 
+                    <span>Discord</span>
+                </li>
+                <li>
+                    <i class='bx bxl-gmail'></i> 
+                    <span>Gmail</span>
+                </li>
+            </ul>
+    
+            <a href="#">COMMING SOON...</a>
+        </aside>
+    
+        <main>
+            <div class="info-server">
+
+                <div class="a uptime">
+                    <div class="head">
+                        <i class="fa-solid fa-server"></i>
+                        <span>Uptime</span>
+                    </div>
+                    <p class="onlTime"></p>
+                    <p class="des">Website Uptime</p>
+                </div>
+            
+
+                <div class="a IP">
+                    <div class="head">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>IP Address</span>
+                    </div>
+                    <p class="yourIP"></p>
+                    <p class="des">Your IP Address</p>
+                </div>
+
+                <div class="a timezone">
+                    <div class="head">
+                        <i class="fa-sharp fa-solid fa-clock-five"></i>
+                        <span>Time</span>
+                    </div>
+                    <p class="time"></p>
+                    <p class="des country"></p>
+                </div>
+
+                <div class="a ping">
+                    <div class="head">
+                        <i class="fa-solid fa-desktop"></i>
+                        <span>Platform</span>
+                    </div>
+                    <p class="platform"></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="../Scripts/data.js" defer></script>
+    <script src="../Scripts/main.js"></script>
+</body>
+</html>
